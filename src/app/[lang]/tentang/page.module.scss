@@ -1,0 +1,47 @@
+@use "../../../components/breakpoints.scss" as breakpoints;
+
+.hero {
+  @include breakpoints.s {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.heroText {
+  @include breakpoints.s {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+.stackGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--static-space-12);
+
+  @include breakpoints.s {
+    gap: var(--static-space-8);
+  }
+}
+
+.interestGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--static-space-8);
+}
+
+.contactBox {
+  @include breakpoints.s {
+    padding: var(--static-space-20);
+  }
+}
+
+.contactActions {
+  @include breakpoints.s {
+    flex-direction: column;
+
+    > * {
+      width: 100%;
+    }
+  }
+}

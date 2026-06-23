@@ -1,0 +1,22 @@
+# Davin Gahisan Mustafid
+
+Frontend Engineer & Web Developer specializing in Next.js and Nuxt.js.
+
+> Fanatical frontend engineer and design engineer at NLFTs. I design user and developer experiences into intuitive and efficient interfaces.
+
+## Links
+
+- [Blog](https://davingm.com/blog)
+- [Projects](https://davingm.com/proyek)
+- [Experiments](https://davingm.com/experimen)
+- [About](https://davingm.com/tentang)
+- [Gallery](https://davingm.com/galeri)
+- [GitHub](https://github.com/davingm)
+- [LinkedIn](https://www.linkedin.com/in/davingm)
+
+## Technical Stack
+- Next.js
+- Nuxt.js
+- TypeScript
+- Tailwind CSS
+- Once UI

@@ -1,0 +1,17 @@
+# Davin Gahisan Mustafid - Full Site Content
+
+This is a comprehensive summary of Davin Gahisan Mustafid's portfolio and blog.
+
+## About
+Davin is a fanatical frontend engineer and design engineer at NLFTs. He designs intuitive and efficient interfaces.
+
+## Expertise
+- Next.js
+- Nuxt.js
+- Frontend Engineering
+- UI/UX Design
+
+## Contact
+- GitHub: https://github.com/davingm
+- LinkedIn: https://www.linkedin.com/in/davingm
+- Email: davin@nlfts.dev

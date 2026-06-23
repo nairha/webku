@@ -1,0 +1,39 @@
+// Sentinel: elemen tak terlihat di dalam footer, dipakai untuk deteksi scroll
+.sentinel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+// Widget: position FIXED tepat di bawah viewport
+.widget {
+  position: fixed;
+  bottom: 0;
+  left: 24px;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: visible !important;
+
+  // Tersembunyi saat footer belum terlihat
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  // Tampil saat footer masuk viewport
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  // Semua level container sakana harus overflow visible
+  :global(.sakana-widget-wrapper),
+  :global(.sakana-widget-app),
+  :global(.sakana-widget-main),
+  :global(.sakana-widget-canvas),
+  :global(.sakana-widget-img) {
+    overflow: visible !important;
+  }
+}

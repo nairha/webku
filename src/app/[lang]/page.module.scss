@@ -1,0 +1,28 @@
+@use "../../components/breakpoints.scss" as breakpoints;
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--static-space-24); /* maps to gap="m" */
+    
+    @media (max-width: breakpoints.$s) {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 24px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; 
+        
+        &::-webkit-scrollbar {
+            display: none; 
+        }
+        
+        > * {
+            scroll-snap-align: start;
+            flex: 0 0 85%; 
+            max-width: 85%;
+        }
+    }
+}
