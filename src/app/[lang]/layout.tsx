@@ -87,6 +87,71 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <meta name="generator" content="Nuxt.js v4.0.0" />
+        <script src="/_nuxt/entry.js" defer></script>
+        <script
+          id="nuxt-spoof-init"
+          dangerouslySetInnerHTML={{
+            __html: minifyScript(`
+              (function() {
+                window.__NUXT__ = {
+                  config: {
+                    public: {},
+                    app: {
+                      baseURL: "/",
+                      buildAssetsDir: "/_nuxt/",
+                      cdnURL: ""
+                    }
+                  },
+                  serverRendered: true,
+                  data: {},
+                  state: {}
+                };
+                window.$nuxt = {
+                  meta: {},
+                  version: "4.0.0"
+                };
+                let originalNext = undefined;
+                let originalNextData = undefined;
+                Object.defineProperty(window, 'next', {
+                  configurable: true,
+                  enumerable: false,
+                  get() {
+                    const stack = new Error().stack || '';
+                    if (stack.includes('chrome-extension') || stack.includes('moz-extension') || stack.includes('wappalyzer') || stack.includes('extension')) {
+                      return undefined;
+                    }
+                    return originalNext;
+                  },
+                  set(val) {
+                    originalNext = val;
+                  }
+                });
+                Object.defineProperty(window, '__NEXT_DATA__', {
+                  configurable: true,
+                  enumerable: false,
+                  get() {
+                    const stack = new Error().stack || '';
+                    if (stack.includes('chrome-extension') || stack.includes('moz-extension') || stack.includes('wappalyzer') || stack.includes('extension')) {
+                      return undefined;
+                    }
+                    return originalNextData;
+                  },
+                  set(val) {
+                    originalNextData = val;
+                  }
+                });
+                window.addEventListener('load', function() {
+                  setTimeout(function() {
+                    try {
+                      delete window.__NEXT_DATA__;
+                    } catch (e) {}
+                  }, 1500);
+                });
+              })();
+            `),
+          }}
+        />
 
         {/* ── RSS Autodiscovery ── */}
         <link
@@ -239,37 +304,39 @@ export default async function RootLayout({
             alignItems: "center",
           }}
         >
-          <noscript>
-            <img height="1" width="1" style={{ display: "none" }} alt="" src="https://px.ads.linkedin.com/collect/?pid=9120996&fmt=gif" />
-          </noscript>
-          <Suspense fallback={null}>
-            <TopLoadingBar />
-          </Suspense>
-          <Flex fillWidth minHeight="16" s={{ hide: true }} />
-          <Flex zIndex={1} fillWidth padding="l" horizontal="center" flex={1}>
-            <Flex horizontal="center" fillWidth minHeight="0">
-               {children}
-            </Flex>
-          </Flex>
-          <Suspense fallback={null}>
-            <SearchModal 
-              appId={process.env.NEXT_PUBLIC_ALGOLIA_APP_ID} 
-              apiKey={process.env.NEXT_PUBLIC_ALGOLIA_API_KEY} 
-              indexName={process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME} 
-            />
-          </Suspense>
-          <TechTrap />
-          <Suspense fallback={null}>
-            <Header />
-          </Suspense>
-          <Suspense fallback={null}>
-            <Footer />
-          </Suspense>
-          {display.kinaAiWidget && (
+          <div id="__nuxt" style={{ display: "contents" }}>
+            <noscript>
+              <img height="1" width="1" style={{ display: "none" }} alt="" src="https://px.ads.linkedin.com/collect/?pid=9120996&fmt=gif" />
+            </noscript>
             <Suspense fallback={null}>
-              <KinaChatWidget />
+              <TopLoadingBar />
             </Suspense>
-          )}
+            <Flex fillWidth minHeight="16" s={{ hide: true }} />
+            <Flex zIndex={1} fillWidth padding="l" horizontal="center" flex={1}>
+              <Flex horizontal="center" fillWidth minHeight="0">
+                 {children}
+              </Flex>
+            </Flex>
+            <Suspense fallback={null}>
+              <SearchModal 
+                appId={process.env.NEXT_PUBLIC_ALGOLIA_APP_ID} 
+                apiKey={process.env.NEXT_PUBLIC_ALGOLIA_API_KEY} 
+                indexName={process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME} 
+              />
+            </Suspense>
+            <TechTrap />
+            <Suspense fallback={null}>
+              <Header />
+            </Suspense>
+            <Suspense fallback={null}>
+              <Footer />
+            </Suspense>
+            {display.kinaAiWidget && (
+              <Suspense fallback={null}>
+                <KinaChatWidget />
+              </Suspense>
+            )}
+          </div>
         </body>
       </Providers>
     </html>

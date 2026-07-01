@@ -57,6 +57,19 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Powered-By",
+            value: "Nuxt.js v4.0.0",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default withMDX(nextConfig);
