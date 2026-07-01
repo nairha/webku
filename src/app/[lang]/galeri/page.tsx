@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: gallery.title,
     description: gallery.description,
     baseURL: baseURL,
-    image: `${baseURL}/api/og/generate?title=${encodeURIComponent(gallery.title)}`,
+    image: `${baseURL}/images/og/author.webp`,
     path: `/${lang}${gallery.path}`,
     robots: 'noimageindex',
   });
@@ -43,7 +43,7 @@ export default async function Gallery({ params }: { params: Promise<{ lang: stri
         title={gallery.title}
         description={gallery.description}
         path={`/${lang}${gallery.path}`}
-        image={`${baseURL}/api/og/generate?title=${encodeURIComponent(gallery.title)}`}
+        image={`${baseURL}/images/og/author.webp`}
         author={{
           name: person.name,
           url: `${baseURL}/${lang}${home.path}`,

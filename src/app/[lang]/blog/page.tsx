@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: blog.title,
     description: blog.description,
     baseURL: baseURL,
-    image: `${baseURL}/api/og/generate?title=${encodeURIComponent(blog.title)}`,
+    image: `${baseURL}/images/og/author.webp`,
     path: `/${lang}${blog.path}`,
     type: "website",
   });
@@ -81,7 +81,7 @@ export default async function Blog({ params }: { params: Promise<{ lang: string 
         title={blog.title}
         description={blog.description}
         path={`/${lang}${blog.path}`}
-        image={`${baseURL}/api/og/generate?title=${encodeURIComponent(blog.title)}`}
+        image={`${baseURL}/images/og/author.webp`}
         author={{
           name: person.name,
           url: `${baseURL}/${lang}${home.path}`,

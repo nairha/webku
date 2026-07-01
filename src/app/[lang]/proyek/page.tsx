@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: work.title,
     description: work.description,
     baseURL: baseURL,
-    image: `${baseURL}/api/og/generate?title=${encodeURIComponent(work.title)}`,
+    image: `${baseURL}/images/og/author.webp`,
     path: `/${lang}${work.path}`,
     type: 'website',
   });
@@ -40,7 +40,7 @@ export default async function Work({ params }: { params: Promise<{ lang: string 
         path={`/${lang}${work.path}`}
         title={work.title}
         description={work.description}
-        image={`${baseURL}/api/og/generate?title=${encodeURIComponent(work.title)}`}
+        image={`${baseURL}/images/og/author.webp`}
         author={{
           name: person.name,
           url: `${baseURL}/${lang}${home.path}`,

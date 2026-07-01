@@ -141,6 +141,8 @@ export const getEnContent = (person: Person, lang: string) => {
       online: [
         { name: "Nairha", motto: "I came, I saw, I conquered", avatar: "https://avatars.githubusercontent.com/u/204519754?s=130&v=4", website: "https://nairha.nlfts.dev", stack: ["Angular"] },
         { name: "	Nafeez", motto: "I use this GitHub to record my development journey and projects. フロントエンド開発とUI/UXデザインに特に興味があります。 Always learning, always growing. @NLFTs @Vercel", avatar: "https://avatars.githubusercontent.com/u/182593937?v=4", website: "https://tokita.nlfts.dev", stack: ["Next"] },
+        { name: "	Silo Kusuma", motto: "hello :)", avatar: "https://avatars.githubusercontent.com/u/159918505?v=4", website: "https://www.silokusuma.top/", stack: ["Next"] },
+        { name: "Dauns", motto: "Elaina 🤤", avatar: "https://avatars.githubusercontent.com/u/147286216?v=4", website: "https://www.daunscode.com/", stack: ["Next"] },
       ],
       aktif: [
         { name: "Vahllzzzz", motto: "Life Is But A Dream.", avatar: "https://avatars.githubusercontent.com/u/202130049?s=130&v=4", website: "https://vahllzzzz.nlfts.dev", stack: ["Nuxt"] },
@@ -172,7 +174,7 @@ export const getEnContent = (person: Person, lang: string) => {
 
   const home: Home = {
     path: "/",
-    image: "/images/og/ogimage.png",
+    image: "/images/og/author.webp",
     label: "Home",
     title: `${person.name} | Frontend Engineer & Web Developer`,
     description: `${person.name}'s portfolio website, a ${person.role} specializing in Next.js and Nuxt.js, focusing on intuitive user experiences.`,

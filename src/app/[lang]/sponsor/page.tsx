@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         title: sponsor.title,
         description: sponsor.description,
         baseURL: baseURL,
-        image: `${baseURL}/api/og/generate?title=${encodeURIComponent(sponsor.title)}`,
+        image: `${baseURL}/images/og/author.webp`,
         path: `/${lang}${sponsor.path}`,
         robots: 'noimageindex',
     });
@@ -70,7 +70,7 @@ export default async function Sponsor({ params }: { params: Promise<{ lang: stri
                 title={sponsor.title}
                 description={sponsor.description}
                 path={`/${lang}${sponsor.path}`}
-                image={`${baseURL}/api/og/generate?title=${encodeURIComponent(sponsor.title)}`}
+                image={`${baseURL}/images/og/author.webp`}
                 author={{
                     name: person.name,
                     url: `${baseURL}/${lang}${home.path}`,

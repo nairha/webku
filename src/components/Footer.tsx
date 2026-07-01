@@ -4,7 +4,6 @@ import { Row, IconButton, SmartLink, Text, Icon } from "@once-ui-system/core";
 import { getContent } from "@/resources";
 import styles from "./Footer.module.scss";
 import { usePathname } from "next/navigation";
-import { SakanaWidget } from "./SakanaWidget";
 
 export const Footer = () => {
   const pathname = usePathname() ?? "";
@@ -14,7 +13,6 @@ export const Footer = () => {
 
   return (
     <Row as="footer" fillWidth paddingX="8" paddingTop="8" paddingBottom="0" horizontal="center" s={{ direction: "column" }} position="relative">
-      <SakanaWidget />
       <Row
         className={styles.mobile}
         maxWidth="m"

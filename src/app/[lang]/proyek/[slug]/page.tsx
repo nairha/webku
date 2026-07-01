@@ -55,7 +55,7 @@ export async function generateMetadata({
     baseURL: baseURL,
     image: post.metadata.image 
       ? (post.metadata.image.startsWith('http') ? post.metadata.image : `${baseURL}${post.metadata.image}`)
-      : `${baseURL}/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`,
+      : `${baseURL}/images/og/author.webp`,
     path: `/${lang}${work.path}/${post.slug}`,
     type: 'article',
   });
@@ -110,7 +110,7 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
                 ? (post.metadata.image.startsWith('http') ? post.metadata.image : `${baseURL}${post.metadata.image}`)
                 : (post.metadata.images?.[0] 
                     ? (post.metadata.images[0].startsWith('http') ? post.metadata.images[0] : `${baseURL}${post.metadata.images[0]}`)
-                    : `${baseURL}/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`)
+                    : `${baseURL}/images/og/author.webp`)
             }
             author={{
               name: person.name,

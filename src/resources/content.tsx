@@ -279,7 +279,9 @@ const getIdContent = (person: Person, lang: string) => {
     friends: {
       online: [
         { name: "Nairha", motto: "我來過，我見過，我掌握了", avatar: "https://avatars.githubusercontent.com/u/204519754?s=130&v=4", website: "https://nairha.nlfts.dev", stack: ["Angular"] },
-        { name: "	Nafeez", motto: "I use this GitHub to record my development journey and projects. フロントエンド開発とUI/UXデザインに特に興味があります。 Always learning, always growing. @NLFTs @Vercel", avatar: "https://avatars.githubusercontent.com/u/182593937?v=4", website: "https://tokita.nlfts.dev", stack: ["Next"] },
+        { name: "Nafeez", motto: "I use this GitHub to record my development journey and projects. フロントエンド開発とUI/UXデザインに特に興味があります。 Always learning, always growing. @NLFTs @Vercel", avatar: "https://avatars.githubusercontent.com/u/182593937?v=4", website: "https://tokita.nlfts.dev", stack: ["Next"] },
+        { name: "Silo Kusuma", motto: "hello :)", avatar: "https://avatars.githubusercontent.com/u/159918505?v=4", website: "https://www.silokusuma.top/", stack: ["Next"] },
+        { name: "Dauns", motto: "Elaina 🤤", avatar: "https://avatars.githubusercontent.com/u/147286216?v=4", website: "https://www.daunscode.com/", stack: ["Next"] },
       ],
       aktif: [
         { name: "Vahllzzzz", motto: "Life Is But A Dream.", avatar: "https://avatars.githubusercontent.com/u/202130049?s=130&v=4", website: "https://vahllzzzz.nlfts.dev", stack: ["Nuxt"] },
@@ -311,7 +313,7 @@ const getIdContent = (person: Person, lang: string) => {
 
   const home: Home = {
     path: "/",
-    image: "/images/og/ogimage.png",
+    image: "/images/og/author.webp",
     label: "Beranda",
     title: `${person.name} | Frontend Engineer & Web Developer`,
     description: `Situs portofolio ${person.name}, seorang ${person.role} spesialis Next.js dan Nuxt.js yang berfokus pada pengalaman pengguna yang intuitif.`,
