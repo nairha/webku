@@ -146,10 +146,10 @@ export const getEnContent = (person: Person, lang: string) => {
       ],
       aktif: [
         { name: "Vahllzzzz", motto: "Life Is But A Dream.", avatar: "https://avatars.githubusercontent.com/u/202130049?s=130&v=4", website: "https://vahllzzzz.nlfts.dev", stack: ["Nuxt"] },
-        { name: "Bara", motto: "My daily life it's usually.", avatar: "https://avatars.githubusercontent.com/u/228843429?s=130&v=4", website: "https://game-devbr0.nlfts.dev/", stack: ["Nuxt"] },
+        { name: "Bara", motto: "My daily life it's usually.", avatar: "https://avatars.githubusercontent.com/u/228843429?s=130&v=4", website: "https://barabr0.nlfts.dev/", stack: ["Nuxt"] },
         { name: "KakaViangi", motto: "Just an ordinary person who loves nature @NFLTs.", avatar: "https://avatars.githubusercontent.com/u/228332586?s=130&v=4", website: "https://destkaa.nlfts.dev/", stack: ["Nuxt"] },
         { name: "Radiedtya", motto: "Just a Rocky", avatar: "https://avatars.githubusercontent.com/u/226198461?v=4", website: "https://xoryn.nlfts.dev", stack: ["React"] },
-        { name: "Lintang", motto: "Students of Bandung", avatar: "https://avatars.githubusercontent.com/u/216552062?v=4", website: "https://lintang.nlfts.dev", stack: ["Nuxt"] },
+        { name: "lintangnwy", motto: "Students of Bandung", avatar: "https://avatars.githubusercontent.com/u/216552062?v=4", website: "https://lintangnwy.nlfts.dev", stack: ["Nuxt"] },
         { name: "Sidikqst", motto: "infokan link github", avatar: "https://avatars.githubusercontent.com/u/230048582?v=4", website: "https://sidiktsq.nlfts.dev", stack: ["Nuxt"] },
       ],
       pena: [],

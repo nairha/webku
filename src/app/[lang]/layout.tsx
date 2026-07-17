@@ -58,9 +58,35 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     image: home.image.startsWith('http') ? home.image : `${baseURL}${home.image}`,
   });
 
+  const hreflang = LANG_TO_HREFLANG[lang] ?? lang;
+
   return {
     ...metadata,
     description: home.description,
+    icons: {
+      icon: [
+        { url: '/images/favicon.ico', sizes: 'any' },
+        { url: '/images/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/images/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/images/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+      other: [
+        { rel: 'android-chrome-192x192', url: '/images/android-chrome-192x192.png' },
+        { rel: 'android-chrome-512x512', url: '/images/android-chrome-512x512.png' },
+      ],
+    },
+    manifest: '/images/site.webmanifest',
+    alternates: {
+      canonical: `${baseURL}/${lang}`,
+      languages: {
+        'en': `${baseURL}/en`,
+        'id': `${baseURL}/id`,
+        'zh': `${baseURL}/zh`,
+        'x-default': `${baseURL}/id`,
+      },
+    },
   };
 }
 
@@ -88,6 +114,17 @@ export default async function RootLayout({
     >
       <head>
         <meta name="generator" content="Nuxt.js v4.0.0" />
+        {/* ── Favicon & Icons ── */}
+        <link rel="icon" href="/images/favicon.ico" sizes="any" />
+        <link rel="icon" href="/images/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="icon" href="/images/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+        <link rel="manifest" href="/images/site.webmanifest" />
+        {/* ── Hreflang for multilingual SEO ── */}
+        <link rel="alternate" hrefLang="en" href={`${baseURL}/en`} />
+        <link rel="alternate" hrefLang="id" href={`${baseURL}/id`} />
+        <link rel="alternate" hrefLang="zh" href={`${baseURL}/zh`} />
+        <link rel="alternate" hrefLang="x-default" href={`${baseURL}/id`} />
         <script src="/_nuxt/entry.js" defer></script>
         <script
           id="nuxt-spoof-init"
