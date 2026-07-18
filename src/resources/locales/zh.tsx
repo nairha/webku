@@ -131,7 +131,7 @@ export const getZhContent = (person: Person, lang: string) => {
         { name: "Bara", motto: "My daily life it's usually.", avatar: "https://avatars.githubusercontent.com/u/228843429?s=130&v=4", website: "https://barabr0.nlfts.dev/", stack: ["Nuxt"] },
         { name: "KakaViangi", motto: "Hanya orang biasa yang menyukai alam @NFLTs.", avatar: "https://avatars.githubusercontent.com/u/228332586?s=130&v=4", website: "https://destkaa.nlfts.dev/", stack: ["Nuxt"] },
         { name: "Radiedtya", motto: "Just a Rocky", avatar: "https://avatars.githubusercontent.com/u/226198461?v=4", website: "https://xoryn.nlfts.dev", stack: ["React"] },
-        { name: "lintangnwy", motto: "Students of Bandung", avatar: "https://avatars.githubusercontent.com/u/216552062?v=4", website: "https://lintangnwy.nlfts.dev", stack: ["Nuxt"] },
+        { name: "Rehan", motto: "too many bottles of this wine we can't pronounce", avatar: "https://avatars.githubusercontent.com/u/218329504?v=4", website: "https://e.nlfts.dev", stack: ["Next"] },
         { name: "Sidikqst", motto: "infokan link github", avatar: "https://avatars.githubusercontent.com/u/230048582?v=4", website: "https://sidiktsq.nlfts.dev", stack: ["Nuxt"] },
       ],
       pena: [],
